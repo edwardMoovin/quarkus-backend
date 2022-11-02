@@ -1,53 +1,51 @@
-# spring-data-jpa-quickstart Project
+# Proyecto base en Quarkus
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+Este es un proyecto basado en Quarkus, de Supersonic Subatomic Java Framework.
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+Si se quiere ver referencias vistar el sitio web:https://quarkus.io/
 
-## Running the application in dev mode
+## Ejecutar la aplicacion en modo debug
 
-You can run your application in dev mode that enables live coding using:
-```shell script
+Puede ejecutar su aplicación en modo dev que permite la codificación en vivo usando:
+
+```script
 ./mvnw compile quarkus:dev
 ```
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+> **_NOTA:_**  se ejecutara en la siguiente dirrección http://localhost:8080/q/dev/.
 
-## Packaging and running the application
+## Packaged y ejecución de la aplicación.
 
-The application can be packaged using:
+La aplicación se puede packaged usando:
+
 ```shell script
 ./mvnw package
 ```
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
 
-The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
+Esto crear un archivo `quarkus-run.jar` en el directorio `target/quarkus-app/`.
 
-If you want to build an _über-jar_, execute the following command:
+La aplicación ahora se puede ejecutar usando `java -jar target/quarkus-app/quarkus-run.jar`.
+
+Si quieres construir un _über-jar_, ejecuta el siguiente comando:
+
 ```shell script
 ./mvnw package -Dquarkus.package.type=uber-jar
 ```
 
-The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
+La aplicación, packaged ahora es _über-jar_, ahora es ejecutable usando `java -jar target/*-runner.jar`.
 
-## Creating a native executable
+## Crear un ejecutable nativo
 
-You can create a native executable using: 
+Puede crear un ejecutable nativo usando:
+
 ```shell script
 ./mvnw package -Pnative
 ```
 
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
+O, si no tiene GraalVM instalado, puede ejecutar la compilación ejecutable nativa en un contenedor usando:
+
 ```shell script
 ./mvnw package -Pnative -Dquarkus.native.container-build=true
 ```
 
-You can then execute your native executable with: `./target/spring-data-jpa-quickstart-1.0.0-SNAPSHOT-runner`
-
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.
-
-## Related Guides
-
-- Quarkus Extension for Spring Data JPA API ([guide](https://quarkus.io/guides/spring-data-jpa)): Use Spring Data JPA annotations to create your data access layer
-- JDBC Driver - PostgreSQL ([guide](https://quarkus.io/guides/datasource)): Connect to the PostgreSQL database via JDBC
+Luego puede ejecutar su ejecutable nativo con: `./target/spring-data-jpa-quickstart-1.0.0-SNAPSHOT-runner`
